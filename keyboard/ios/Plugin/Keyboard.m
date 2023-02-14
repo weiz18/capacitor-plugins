@@ -109,7 +109,7 @@ NSString* UITraitsClassString;
 
 - (void)onKeyboardWillHide:(NSNotification *)notification
 {
-  [self setKeyboardHeight:0 delay:0.01];
+  [self setKeyboardHeight:0 delay:0];
   [self resetScrollView];
   hideTimer = [NSTimer scheduledTimerWithTimeInterval:0 repeats:NO block:^(NSTimer * _Nonnull timer) {
     [self.bridge triggerWindowJSEventWithEventName:@"keyboardWillHide"];
